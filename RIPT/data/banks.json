@@ -1,0 +1,202 @@
+{
+  "State Bank of India": {
+    "country": "India",
+    "swift": "SBININBB",
+    "code": "SBI",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP", "JPY"],
+    "headquarters": "Mumbai",
+    "established": 1955
+  },
+  "ICICI Bank": {
+    "country": "India",
+    "swift": "ICICINBB",
+    "code": "ICICI",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP", "SGD"],
+    "headquarters": "Mumbai",
+    "established": 1994
+  },
+  "HDFC Bank": {
+    "country": "India",
+    "swift": "HDFCINBB",
+    "code": "HDFC",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP", "AUD"],
+    "headquarters": "Mumbai",
+    "established": 1994
+  },
+  "Axis Bank": {
+    "country": "India",
+    "swift": "AXISINBB",
+    "code": "AXIS",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP", "JPY"],
+    "headquarters": "Mumbai",
+    "established": 1993
+  },
+  "Punjab National Bank": {
+    "country": "India",
+    "swift": "PUNBINBB",
+    "code": "PNB",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "New Delhi",
+    "established": 1894
+  },
+  "Bank of Baroda": {
+    "country": "India",
+    "swift": "BARBINBB",
+    "code": "BOB",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP", "AED"],
+    "headquarters": "Vadodara",
+    "established": 1908
+  },
+  "Union Bank of India": {
+    "country": "India",
+    "swift": "UBININBB",
+    "code": "UBI",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Mumbai",
+    "established": 1919
+  },
+  "Canara Bank": {
+    "country": "India",
+    "swift": "CNRBINBB",
+    "code": "CNB",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Bangalore",
+    "established": 1906
+  },
+  "Indian Overseas Bank": {
+    "country": "India",
+    "swift": "IOBAINBB",
+    "code": "IOB",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Chennai",
+    "established": 1937
+  },
+  "Central Bank of India": {
+    "country": "India",
+    "swift": "CBININBB",
+    "code": "CBI",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Mumbai",
+    "established": 1911
+  },
+  "Bank of India": {
+    "country": "India",
+    "swift": "BKIDINBB",
+    "code": "BOI",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Mumbai",
+    "established": 1906
+  },
+  "Indian Bank": {
+    "country": "India",
+    "swift": "IDIBINBB",
+    "code": "IB",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Chennai",
+    "established": 1907
+  },
+  "UCO Bank": {
+    "country": "India",
+    "swift": "UCBAINBB",
+    "code": "UCO",
+    "type": "Public Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Kolkata",
+    "established": 1943
+  },
+  "Yes Bank": {
+    "country": "India",
+    "swift": "YESBINBB",
+    "code": "YES",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Mumbai",
+    "established": 2004
+  },
+  "IndusInd Bank": {
+    "country": "India",
+    "swift": "INDBINBB",
+    "code": "IIB",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Mumbai",
+    "established": 1994
+  },
+  "Kotak Mahindra Bank": {
+    "country": "India",
+    "swift": "KKBKINBB",
+    "code": "KMB",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Mumbai",
+    "established": 2003
+  },
+  "Federal Bank": {
+    "country": "India",
+    "swift": "FDRLINBB",
+    "code": "FB",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Aluva",
+    "established": 1931
+  },
+  "IDFC First Bank": {
+    "country": "India",
+    "swift": "IDFBINBB",
+    "code": "IDFC",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Mumbai",
+    "established": 2015
+  },
+  "RBL Bank": {
+    "country": "India",
+    "swift": "RATNIN55",
+    "code": "RBL",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR", "GBP"],
+    "headquarters": "Mumbai",
+    "established": 1943
+  },
+  "Bandhan Bank": {
+    "country": "India",
+    "swift": "BDBLИНBB",
+    "code": "BB",
+    "type": "Private Sector",
+    "srva_authorized": true,
+    "currencies": ["INR", "USD", "EUR"],
+    "headquarters": "Kolkata",
+    "established": 2015
+  }
+}
