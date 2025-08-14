@@ -1,0 +1,245 @@
+{
+  "Russia": {
+    "currency": "RUB",
+    "region": "Europe/Asia",
+    "code": "RU",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "Europe/Moscow",
+    "banking_hours": "09:00-18:00"
+  },
+  "Germany": {
+    "currency": "EUR",
+    "region": "Europe",
+    "code": "DE",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Europe/Berlin",
+    "banking_hours": "08:00-16:00"
+  },
+  "United Kingdom": {
+    "currency": "GBP",
+    "region": "Europe",
+    "code": "GB",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Europe/London",
+    "banking_hours": "09:00-17:00"
+  },
+  "France": {
+    "currency": "EUR",
+    "region": "Europe",
+    "code": "FR",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Europe/Paris",
+    "banking_hours": "09:00-17:00"
+  },
+  "Italy": {
+    "currency": "EUR",
+    "region": "Europe",
+    "code": "IT",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Europe/Rome",
+    "banking_hours": "08:30-16:30"
+  },
+  "Singapore": {
+    "currency": "SGD",
+    "region": "Asia",
+    "code": "SG",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Asia/Singapore",
+    "banking_hours": "09:00-16:30"
+  },
+  "Japan": {
+    "currency": "JPY",
+    "region": "Asia",
+    "code": "JP",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Asia/Tokyo",
+    "banking_hours": "09:00-15:00"
+  },
+  "China": {
+    "currency": "CNY",
+    "region": "Asia",
+    "code": "CN",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "Asia/Shanghai",
+    "banking_hours": "09:00-17:00"
+  },
+  "South Korea": {
+    "currency": "KRW",
+    "region": "Asia",
+    "code": "KR",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Asia/Seoul",
+    "banking_hours": "09:00-16:00"
+  },
+  "Australia": {
+    "currency": "AUD",
+    "region": "Oceania",
+    "code": "AU",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Australia/Sydney",
+    "banking_hours": "09:00-17:00"
+  },
+  "Canada": {
+    "currency": "CAD",
+    "region": "North America",
+    "code": "CA",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "America/Toronto",
+    "banking_hours": "09:00-17:00"
+  },
+  "United States": {
+    "currency": "USD",
+    "region": "North America",
+    "code": "US",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "America/New_York",
+    "banking_hours": "09:00-17:00"
+  },
+  "Brazil": {
+    "currency": "BRL",
+    "region": "South America",
+    "code": "BR",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "America/Sao_Paulo",
+    "banking_hours": "10:00-16:00"
+  },
+  "Mexico": {
+    "currency": "MXN",
+    "region": "North America",
+    "code": "MX",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "America/Mexico_City",
+    "banking_hours": "09:00-16:00"
+  },
+  "Turkey": {
+    "currency": "TRY",
+    "region": "Europe/Asia",
+    "code": "TR",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "Europe/Istanbul",
+    "banking_hours": "09:00-17:00"
+  },
+  "United Arab Emirates": {
+    "currency": "AED",
+    "region": "Middle East",
+    "code": "AE",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Asia/Dubai",
+    "banking_hours": "08:00-15:00"
+  },
+  "Saudi Arabia": {
+    "currency": "SAR",
+    "region": "Middle East",
+    "code": "SA",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "Asia/Riyadh",
+    "banking_hours": "08:00-14:00"
+  },
+  "Egypt": {
+    "currency": "EGP",
+    "region": "Africa",
+    "code": "EG",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "Africa/Cairo",
+    "banking_hours": "08:30-14:30"
+  },
+  "South Africa": {
+    "currency": "ZAR",
+    "region": "Africa",
+    "code": "ZA",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "Africa/Johannesburg",
+    "banking_hours": "08:00-15:30"
+  },
+  "Thailand": {
+    "currency": "THB",
+    "region": "Asia",
+    "code": "TH",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Asia/Bangkok",
+    "banking_hours": "09:00-15:30"
+  },
+  "Malaysia": {
+    "currency": "MYR",
+    "region": "Asia",
+    "code": "MY",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Asia/Kuala_Lumpur",
+    "banking_hours": "09:00-16:00"
+  },
+  "Philippines": {
+    "currency": "PHP",
+    "region": "Asia",
+    "code": "PH",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Asia/Manila",
+    "banking_hours": "09:00-15:00"
+  },
+  "Indonesia": {
+    "currency": "IDR",
+    "region": "Asia",
+    "code": "ID",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Asia/Jakarta",
+    "banking_hours": "08:00-15:00"
+  },
+  "Vietnam": {
+    "currency": "VND",
+    "region": "Asia",
+    "code": "VN",
+    "risk_level": "Low",
+    "srva_eligible": true,
+    "time_zone": "Asia/Ho_Chi_Minh",
+    "banking_hours": "07:30-16:30"
+  },
+  "Bangladesh": {
+    "currency": "BDT",
+    "region": "Asia",
+    "code": "BD",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "Asia/Dhaka",
+    "banking_hours": "09:00-15:00"
+  },
+  "Sri Lanka": {
+    "currency": "LKR",
+    "region": "Asia",
+    "code": "LK",
+    "risk_level": "Medium",
+    "srva_eligible": true,
+    "time_zone": "Asia/Colombo",
+    "banking_hours": "09:00-15:00"
+  },
+  "Myanmar": {
+    "currency": "MMK",
+    "region": "Asia",
+    "code": "MM",
+    "risk_level": "High",
+    "srva_eligible": true,
+    "time_zone": "Asia/Yangon",
+    "banking_hours": "09:30-15:00"
+  }
+}
