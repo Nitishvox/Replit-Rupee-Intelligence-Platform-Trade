@@ -15,6 +15,22 @@ import json
 
 from config import Config
 
+# Helper class for the rule-based system
+class _RuleEvaluator:
+    def __init__(self, rules: List[Tuple[callable, int]]):
+        self.rules = rules
+
+    def evaluate(self, transaction: Dict[str, Any]) -> float:
+        """Evaluates a transaction against a set of rules."""
+        total_risk = 0
+        for rule_func, risk_value in self.rules:
+            try:
+                if rule_func(transaction):
+                    total_risk += risk_value
+            except Exception:
+                continue # Ignore rule if it fails
+        return min(100.0, float(total_risk))
+
 class SynchronizedAIFraudDetector:
     """
     A thread-safe, advanced fraud detection system combining multiple models.
@@ -52,6 +68,40 @@ class SynchronizedAIFraudDetector:
         
         # Start real-time processing thread
         self._start_realtime_processor()
+
+    def _create_velocity_rules(self) -> _RuleEvaluator:
+        """Creates velocity-based fraud rules."""
+        # Note: These rules are simplified as they don't have access to full user history here.
+        # The main AI model handles more complex velocity checks.
+        rules = [
+            (lambda t: t.get('velocity_risk_indicator', 0) > 5, 40), # Placeholder for a pre-calculated indicator
+        ]
+        return _RuleEvaluator(rules)
+
+    def _create_amount_rules(self) -> _RuleEvaluator:
+        """Creates amount-based fraud rules."""
+        rules = [
+            (lambda t: t.get('amount', 0) > 5_000_000, 30), # High amount
+            (lambda t: 9900 < t.get('amount', 0) % 10000 < 9999, 50), # Structuring/Smurfing attempt
+            (lambda t: t.get('amount', 0) % 1000 == 0 and t.get('amount', 0) > 10000, 15), # Round numbers
+        ]
+        return _RuleEvaluator(rules)
+
+    def _create_behavior_rules(self) -> _RuleEvaluator:
+        """Creates behavior-based fraud rules."""
+        rules = [
+            (lambda t: t.get('is_new_counterparty', False), 25), # Transaction to a new beneficiary
+            (lambda t: t.get('source') == 'SWIFT' and t.get('corridor') in ['IN-RU', 'IN-AE'], 40), # High-risk channel/corridor combo
+        ]
+        return _RuleEvaluator(rules)
+
+    def _create_temporal_rules(self) -> _RuleEvaluator:
+        """Creates time-based fraud rules."""
+        rules = [
+            (lambda t: pd.to_datetime(t.get('timestamp')).hour < 6 or pd.to_datetime(t.get('timestamp')).hour > 22, 35), # Late night/early morning
+            (lambda t: pd.to_datetime(t.get('timestamp')).weekday() >= 5, 15), # Weekend transaction
+        ]
+        return _RuleEvaluator(rules)
         
     def calculate_risk_score(self, transaction: Dict[str, Any]) -> float:
         """Calculate comprehensive AI-powered risk score for a transaction"""
@@ -566,51 +616,36 @@ class SynchronizedAIFraudDetector:
         
         return flags
 
-    def _create_velocity_rules(self):
-        """Create velocity-based fraud rules"""
-        class VelocityRules:
-            def evaluate(self, transaction):
-                # Simple velocity check
-                return 15 if transaction.get('amount', 0) > 1000000 else 5
-        return VelocityRules()
-    
-    def _create_amount_rules(self):
-        """Create amount-based fraud rules"""
-        class AmountRules:
-            def evaluate(self, transaction):
-                amount = transaction.get('amount', 0)
-                if amount > 50000000: return 40
-                elif amount > 10000000: return 25
-                elif amount > 1000000: return 15
-                return 5
-        return AmountRules()
-    
-    def _create_behavior_rules(self):
-        """Create behavior-based fraud rules"""
-        class BehaviorRules:
-            def evaluate(self, transaction):
-                # Check for suspicious patterns
-                risk = 0
-                if transaction.get('source', '').startswith('SRVA'): risk += 10
-                if transaction.get('currency', 'INR') != 'INR': risk += 8
-                return risk
-        return BehaviorRules()
-    
-    def _create_temporal_rules(self):
-        """Create time-based fraud rules"""
-        class TemporalRules:
-            def evaluate(self, transaction):
-                from datetime import datetime
-                import pandas as pd
-                timestamp = transaction.get('timestamp', datetime.now())
-                if isinstance(timestamp, str):
-                    timestamp = pd.to_datetime(timestamp)
+    def generate_fraud_alerts(self, transactions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Generate fraud alerts for a list of transactions."""
+        alerts = []
+        for txn in transactions:
+            flags = self.get_fraud_flags(txn)
+            if flags:
+                severity = 'high' if len(flags) > 2 else 'medium' if len(flags) > 1 else 'low'
+                message = f"Fraud flags in txn {txn.get('id', 'unknown')}: {', '.join(flags)} (Risk: {txn.get('risk_score', 0):.1f})"
+                alerts.append({'severity': severity, 'message': message})
+        return alerts
+
+    def _update_model_from_db(self):
+        """Update internal models and patterns from the central database"""
+        try:
+            # Placeholder for database fetch
+            # In real implementation, this would pull new data and model updates from a database
+            new_data = []  # Fetch new transaction data
+            updated_signatures = {}  # Fetch updated fraud signatures
+            
+            with self.sync_lock:
+                # Update pattern memory with new data
+                for transaction in new_data:
+                    self._update_pattern_memory(transaction, transaction.get('risk_score', 0))
                 
-                risk = 0
-                if timestamp.hour < 6 or timestamp.hour > 22: risk += 15
-                if timestamp.weekday() >= 5: risk += 8
-                return risk
-        return TemporalRules()
+                # Update fraud signatures
+                self.fraud_signatures.update(updated_signatures)
+        
+        except Exception as e:
+            st.warning(f"Model update error: {str(e)}")
+            time.sleep(10)  # Wait before retrying
 
 # Backward compatibility alias
 FraudDetector = SynchronizedAIFraudDetector
